@@ -1,23 +1,56 @@
 ---
 layout: default
+permalink: /
 ---
 
-<div class="home">
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 style="text-align: center;"><img src="images/logo.png" style="width:100%;max-width:300px;" alt="ArchC"/></h1>
+        <h4 style="text-align: center;">Architecture Description Language</h4>
+        <p>ArchC is a powerful and modern open-source architecture description language designed at <a href="http://www.unicamp.br/">University of Campinas</a> by the ArchC team in the <a href="http://www.lsc.ic.unicamp.br/">Computer Systems Laboratory</a>, <a href="http://www.ic.unicamp.br/">Institute of Computing</a>.</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="https://github.com/ArchC/ArchC/archive/v2.4.1.tar.gz">Download &raquo;</a>
+          <a class="btn btn-info btn-lg" href="doc.quickstart.html">Getting Started &raquo;</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="images/screenshot.png" style="width:100%;"/>
+      </div>
+    </div>
+    <div class="row">
+      <blockquote class="pull-right">
+        <p>Our goal in designing ArchC is to provide architecture designers with a tool that allows them to rapidly evaluate new ideas in areas such as: processor and ISA design, memory hierarchy, and other aspects of computer architecture research.</p>
+        <small>The <cite title="Source Title">ArchC Team</cite></small>
+      </blockquote>
+    </div>
+  </div>
+</div>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.github.url }}">via RSS</a></p>
-
+<div class="container">
+  <div class="row">
+    <!-- Three columns of text below the carousel -->
+     <div class="row">
+       <div class="col-lg-3" style="text-align: center;">
+         <h2>Fast prototyping</h2>
+         <p>Easy to use language, describes hardware and processor using
+high level hardware abstractions.</p>
+       </div><!-- /.col-lg-3 -->
+       <div class="col-lg-3" style="text-align: center;">
+         <h2>ISA simulator</h2>
+         <p>ArchC generates compiled and interpreted simulators based on a
+machine models.</p>
+       </div><!-- /.col-lg-3 -->
+       <div class="col-lg-3" style="text-align: center;">
+         <h2>SystemC technology</h2>
+         <p>ArchC is based on SystemC, a hardware description language that
+receives a strong support from many companies in the computer industry.</p>
+       </div><!-- /.col-lg-3 -->
+       <div class="col-lg-3" style="text-align: center;">
+         <h2>Automatic toolchain generation</h2>
+         <p>Generates binutils-based assemblers and linkers, C and C++ Clang-based frontend and LLVM Backends for new models.</p>
+       </div><!-- /.col-lg-3 -->
+     </div><!-- /.row -->
+  </div>
 </div>
