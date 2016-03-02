@@ -1,0 +1,50 @@
+#- title:
+#  journal:
+#  language:
+#  date: YYYY-MM-DD
+#  url:
+#  pdf:
+#  doi:
+
+#
+# 2012
+#
+
+- title: Profiling High Level Abstraction Simulators of Multiprocessor Systems
+  journal: WCAS
+  date: 2012-01-01
+  url: http://www.lbd.dcc.ufmg.br/bdbcomp/servlet/Trabalho?id=14143
+
+- title: Optimizing Simulation in Multiprocessor Platforms using Dynamic-Compiled Simulation
+  journal: WSCAD-SSC
+  date: 2012-01-01
+  url: http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6391767
+
+#
+# 2011
+#
+
+- title: Software Co-Verification Based on Program Traces from Different Processors
+  journal: WISH
+  date: 2011-01-01
+  pdf: http://wish.lsc.ic.unicamp.br/wish11/WISH11-proceedings.pdf#page=37
+
+- title: Using Multiple Abstraction Levels to Speedup an MPSoC Virtual Platform Simulator
+  journal: RSP
+  date: 2011-01-01
+  url: http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5929982
+
+#
+# 2010
+#
+- title: Optimizing a Retargetable Compiled Simulator to Achieve Near-Native Performance
+  journal: WSCAD-SSC
+  language: Portuguese
+  date: 2010-01-01
+  url: http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5645448
+
+- title: "ARP: Um Gerenciador de Pacotes para Sistemas Embarcados com Processadores Modelados em ArchC"
+  journal: WSE
+  language: Portuguese
+  date: 2010-01-01
+  pdf: http://cajueiro.lsc.ic.unicamp.br/publications/azevedo2010wse.pdf

@@ -1,0 +1,82 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+
+<div class="container">
+
+  <div class="well">
+    <h4>Overview Paper<span class="label label-primary pull-right">Springer JDAES</span></h3>
+    <h3> The ArchC Architecture Description Language and Tools</h3>
+    <h5>Rodolfo Azevedo, Sandro Rigo, Marcus Bartholomeu, Guido Araujo, Cristiano Araujo, Edna Barros</h5>
+
+    <p><div class="btn-group" role="group" aria-label="...">
+      <a class="btn btn-primary" {% if pub.url %} href="{{pub.url}}"
+      {% else %} disabled="disabled" {% endif %}>
+        <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> URL
+      </a>
+      <a class="btn btn-primary" {% if pub.pdf %} href="{{pub.pdf}}"
+      {% else %} disabled="disabled" {% endif %}>
+        <span class="glyphicon glyphicon-file" aria-hidden="true"></span> PDF
+      </a>
+    </div></p>
+
+  </div>
+
+
+  <p>For an up-to-date list of all papers citing the primary {{site.title}} paper, see <a href="https://scholar.google.com/scholar?cites=12636727935555894578">Google Scholar</a>.</p>
+  <!-- https://scholar.google.com/scholar?cites=12636727935555894578 -->
+  <!-- https://scholar.google.com/scholar?cites=12063345720647151101 -->
+
+  <p>Here we list {{ site.data.publications | size }} publications.</p>
+
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    {% assign year = '0' %}
+    {% for pub in site.data.publications %}
+      {% assign thisyear = pub.date | date: "%Y" %}
+      {% if thisyear != year %}
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">{{thisyear}}</h4>
+          </div>
+        </div>
+        {% assign year = thisyear %}
+      {% endif %}
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading{{ forloop.index }}">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">
+            <h4 class="panel-title">
+              {{pub.title}}
+              <span class="label label-primary pull-right">{{pub.journal}}</span>
+              {% if pub.language %}
+                {% if pub.language != "English" %}
+                  <span class="badge pull-right" style="margin-right:10px;">{{pub.language}}</span>
+                {% endif %}
+              {% endif %}
+            </h4>
+          </a>
+        </div>
+        <div div id="collapse{{ forloop.index }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ forloop.index }}">
+          <div class="panel-body">
+            {% if pub.abstract %}
+              <p>{{pub.abstract}}</p>
+            {% endif %}
+
+            <p><div class="btn-group" role="group" aria-label="...">
+              <a class="btn btn-primary" {% if pub.url %} href="{{pub.url}}"
+              {% else %} disabled="disabled" {% endif %}>
+                <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> URL
+              </a>
+              <a class="btn btn-primary" {% if pub.pdf %} href="{{pub.pdf}}"
+              {% else %} disabled="disabled" {% endif %}>
+                <span class="glyphicon glyphicon-file" aria-hidden="true"></span> PDF
+              </a>
+            </div></p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
